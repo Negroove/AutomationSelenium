@@ -10,15 +10,13 @@ on:
 
 jobs:
   build:
-
     runs-on: windows-2019
-
     steps:
     - uses: actions/checkout@v3
     - name: Setup .NET
-      uses: actions/setup-dotnet@v3
+      uses: actions/setup-dotnet@v3.2.0
       with:
-        dotnet-version: '4.8'
+        dotnet-version: '4.0'
     - name: Restore dependencies
       run: nuget restore
     - name: Build
