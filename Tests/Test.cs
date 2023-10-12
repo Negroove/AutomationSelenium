@@ -11,7 +11,6 @@ namespace AutomatizacionPrueba
         public void LoginSendbox()
         {
             Login login = new Login(driver);
-            login.login("20255735439", "asdasd123");
         }
     }
 }

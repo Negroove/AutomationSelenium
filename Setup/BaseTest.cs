@@ -13,10 +13,12 @@ namespace AutomatizacionPrueba
     public class BaseTest
     {
         protected IWebDriver driver = new ChromeDriver();
+        ChromeOptions option = new ChromeOptions();
 
         [TestInitialize]
         public void Setup()
         {
+            option.AddArguments("--headless");
             driver.Manage().Window.Maximize();
         }
 
