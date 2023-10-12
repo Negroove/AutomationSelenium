@@ -10,10 +10,10 @@ on:
 
 jobs:
   build:
-    runs-on: windows-2022
+    runs-on: windows-2019
     steps:
     - uses: actions/checkout@v3
-    - name: Setup .NET
+    - name: Setup .NET Core SDK
       uses: actions/setup-dotnet@v3.2.0
       with:
         dotnet-version: 6.x.x
