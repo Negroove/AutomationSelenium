@@ -1,5 +1,6 @@
 ﻿using AutomatizacionPrueba.Setup;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
@@ -15,14 +16,14 @@ namespace AutomatizacionPrueba
         protected IWebDriver driver = new ChromeDriver();
         ChromeOptions option = new ChromeOptions();
 
-        [TestInitialize]
+        [SetUp]
         public void Setup()
         {
             option.AddArguments("--headless");
             driver.Manage().Window.Maximize();
         }
 
-        [TestCleanup]
+        [TearDown]
         public void TearDownAfterTestMethod()
         {
             close();

@@ -43,17 +43,17 @@ namespace AutomatizacionPrueba.Pages
 
         public void login(string usuario, string contraseña)
         {
-            driver.Navigate().GoToUrl("https://www.google.com.ar/");
-            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(txtUsuario));
-            txtUsuario.SendKeys(usuario);
-            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(txtContraseña));
-            txtContraseña.SendKeys(contraseña);
-            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(btnIngresar));
-            btnIngresar.Click();
-            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible
-                (By.XPath("")));
-            string texto = driver.FindElement(By.XPath("//span[@class='md-headline ng-binding']")).Text;
-            Assert.AreEqual("", texto);
+            driver.Navigate().GoToUrl("https://www.youtube.com.ar/");
+            //wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(txtUsuario));
+            //txtUsuario.SendKeys(usuario);
+            //wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(txtContraseña));
+            //txtContraseña.SendKeys(contraseña);
+            //wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(btnIngresar));
+            //btnIngresar.Click();
+            //wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible
+            //    (By.XPath("")));
+            //string texto = driver.FindElement(By.XPath("//span[@class='md-headline ng-binding']")).Text;
+            //Assert.AreEqual("", texto);
         }
     }
 }

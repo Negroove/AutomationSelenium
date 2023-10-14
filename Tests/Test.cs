@@ -1,16 +1,19 @@
 ﻿using AutomatizacionPrueba.Pages;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using System;
+using System.Threading;
 
 namespace AutomatizacionPrueba
 {
-    [TestClass]
+    [TestFixture]
     public class Test : BaseTest
     {
-        [TestMethod]
+        [Test]
         public void LoginSendbox()
         {
             Login login = new Login(driver);
+            login.login("","");
         }
     }
 }
