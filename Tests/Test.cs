@@ -1,5 +1,4 @@
 ﻿using AutomatizacionPrueba.Pages;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 using System;
 using System.Threading;
